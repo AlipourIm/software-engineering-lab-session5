@@ -22,11 +22,15 @@ public class Rectangle extends Shape{
         return height;
     }
 
-    public void setWidth(double width) {
-        this.height = width;
+    public void setWidth(double width) throws Exception {
+        if (width < 0)
+            throw new Exception("Invalid value");
+        this.width = width;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(double height) throws Exception {
+        if (height < 0)
+            throw new Exception("Invalid value");
         this.height = height;
     }
 }

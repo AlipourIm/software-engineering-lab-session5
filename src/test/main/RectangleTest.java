@@ -6,13 +6,13 @@ import org.junit.function.ThrowingRunnable;
 
 public class RectangleTest {
     @Test
-    public void testSetterAndGetter() {
+    public void testSetterAndGetter() throws Exception {
         Rectangle rc = new Rectangle(20, 50);
         rc.setWidth(50);
-        Assert.assertEquals(50, rc.getWidth());
+        Assert.assertEquals(50d, rc.getWidth(), 0.0001);
 
         rc.setHeight(20);
-        Assert.assertEquals(20, rc.getHeight());
+        Assert.assertEquals(20d, rc.getHeight(), 0.0001);
     }
 
     @Test
@@ -33,7 +33,7 @@ public class RectangleTest {
     }
 
     @Test
-    public void testGetAreaZero() {
+    public void testGetAreaZero() throws Exception {
         Rectangle rc = new Rectangle(20, 50);
         rc.setHeight(0);
         rc.setWidth(20);
