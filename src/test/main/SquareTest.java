@@ -8,13 +8,13 @@ public class SquareTest {
     public void testGetterSetter() {
         Square sq = new Square();
         sq.setSide(20);
-        Assert.assertEquals(20, sq.getSide());
+        Assert.assertEquals(20d, sq.getSide(), 0.001);
     }
 
     @Test
     public void testGetArea() {
         Square sq = new Square();
         sq.setSide(20);
-        Assert.assertEquals(400, sq.getArea());
+        Assert.assertEquals(400d, sq.getArea(), 0.0001);
     }
 }
