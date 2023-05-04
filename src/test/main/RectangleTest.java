@@ -18,7 +18,7 @@ public class RectangleTest {
     @Test
     public void testSetterError() {
         final Rectangle rc = new Rectangle(20, 50);
-        Assert.assertThrows(new Exception("Height cannot be negative"), new ThrowingRunnable() {
+        Assert.assertThrows(Exception.class, new ThrowingRunnable() {
             @Override
             public void run() throws Throwable {
                 rc.setHeight(-50);
