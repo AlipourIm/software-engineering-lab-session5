@@ -6,14 +6,16 @@ public class Square extends Shape{
 
     @Override
     double getArea() {
-        return 0;
+        return this.side * this.side;
     }
 
     public double getSide() {
         return side;
     }
 
-    public void setSide(double side) {
+    public void setSide(double side) throws Exception {
+        if (side < 0)
+            throw new Exception("Invalid value");
         this.side = side;
     }
 }
